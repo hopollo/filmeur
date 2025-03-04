@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles.css">
   <title>Filmeur 2.0</title>
 </head>
+
 <body>
-  <div class="main" style="display:flex; flex-direction:column; gap:5px; justify-content:center; align-items: center;">
+  <div class="main">
     <h1>Filmeur 2.0</h1>
 
-    <input id="title" placeholder="Titre (optionnel)" />
-    <input id="source" placeholder="lieux" value="Rue Georges Dimitrov, 95870 Bezons" />
-    
+    <input id="title" placeholder="Titre (optionnel)" autocomplete="false" />
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+      <input id="source" placeholder="Adresse google maps" required />
+      <button id="clearSource" style="cursor: pointer; font-size: 5vh;">×</button>
+    </div>
+
     <a id="waLink" data-action="share/whatsapp/share">Envoyer sur Whatsapp</a>
-    
-    <span>v.beta</span>
+
+    <h1 id="finalLink"></h1>
+
+    <span id="error"></span>
+
+    <span>v.1.0.0</span>
   </div>
+
+  <script src="./main.js"></script>
 </body>
+
 </html>
