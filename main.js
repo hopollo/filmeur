@@ -10,7 +10,8 @@ const gmapsBaseUrl = "https://www.google.com/maps/dir/?api=1&origin=Current+Loca
 const waBaseUrl = "whatsapp://send?text=";
 
 function isValidInput(input) {
-  return /^[a-zA-Z0-9\s,.-]+$/.test(input);
+  //return /^[a-zA-Z0-9\s,.-]+$/.test(input);
+   return true; 
 }
 
 function debounce(func, delay) {
