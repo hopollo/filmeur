@@ -12,20 +12,30 @@
   <div class="main">
     <h1>Filmeur 2.0</h1>
 
-    <input id="title" placeholder="Titre (optionnel)" autocomplete="false" />
+    <input id="title" placeholder="Titre (optionnel)" autocomplete="false"
+      title="Donnez un titre au lien ou autre en-tête" />
 
     <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-      <input id="source" placeholder="Adresse google maps" required />
-      <button id="clearSource" style="cursor: pointer; font-size: 5vh;">×</button>
+      <input id="source" placeholder="Adresse google maps" title="Collez l'adresse copiée depuis Google Maps" required
+        autofocus="true" />
+      <button id="clearSource" style="cursor: pointer; font-size: 5vh;" title="Vider la saisie">×</button>
     </div>
 
-    <a id="waLink" data-action="share/whatsapp/share">Envoyer sur Whatsapp</a>
-
-    <h1 id="finalLink"></h1>
+    <div id="actions">
+      <a id="waLink" class="action" data-action="share/whatsapp/share" title="Transférer le lien par WhatsApp">Envoyer
+        via Whatsapp</a>
+      <span>ou</span>
+      <button id="shareLink" class="action" onclick="shareLink()"
+        title="Partager le lien via d'autres méthodes">Partager</button>
+      <span>ou</span>
+      <button id="clipboardLink" class="action" onclick="copyLinkToClipboard()"
+        title="Copier le lien dans le presse-papier">Copier</button>
+    </div>
 
     <span id="error"></span>
 
-    <span>v.1.0.0</span>
+    <span>v.1.1.0</span>
+    <span>MàJ : 04/03/2025</span>
   </div>
 
   <script src="./main.js"></script>

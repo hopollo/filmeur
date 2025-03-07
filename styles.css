@@ -62,34 +62,53 @@ input::placeholder {
   color: #ff4444;
 }
 
-#waLink {
-  display: inline-block;
+#actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  color: #888;
+}
+
+.action {
+  cursor: pointer;
   padding: 20px;
-  background-color: #088837;
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+#waLink {
+  background-color: #088837;
 }
 
 #waLink:hover {
   background-color: #128c7e;
-  cursor: pointer;
 }
 
-#finalLink {
-  color: #25d366;
-  margin-top: 15px;
-  font-size: 18px;
+#shareLink {
+  background-color:blue;
+}
+
+#shareLink:hover {
+  background-color: #1b46bb;
+}
+
+#clipboardLink {
+  background-color: #dbbd12;
+}
+
+#clipboardLink:hover {
+  background-color: #b97903;
 }
 
 span {
   color: #888;
   font-size: 14px;
-  margin-top: 20px;
 }
-
 
 #error {
   color: red;
