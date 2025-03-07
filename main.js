@@ -14,7 +14,8 @@ const waBaseUrl = "whatsapp://send?text=";
 let finalLinkToShare = null;
 
 function isValidInput(input) {
-  return /^[a-zA-Z0-9\s,.-]+$/.test(input);
+  //return /^[a-zA-Z0-9\s,.-]+$/.test(input);
+   return true; 
 }
 
 function debounce(func, delay) {
